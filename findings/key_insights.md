@@ -197,7 +197,7 @@ These customer profiles illustrate how multiple churn drivers combine to create 
 
 During data preparation, the following issues were identified and resolved:
 
-* Fixed **11 blank TotalCharges values**, all belonging to new customers (`tenure = 0`), using `NULLIF(TRIM(...), '')`.
+* Fixed **11 blank TotalCharges values**, all belonging to new customers (`tenure = 0`), using Update and Set.
 * Removed hidden carriage return characters (`\r`, Hex `0D`) from all text columns using `REPLACE(column, CHAR(13), '')` after diagnosing the issue with `HEX()` and `LENGTH()`.
 * Verified categorical consistency across all service-related fields before performing the analysis.
 
