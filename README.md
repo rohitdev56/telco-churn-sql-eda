@@ -30,7 +30,7 @@ The objective is to identify the key factors influencing customer churn, uncover
 
 The following data quality issues were identified and resolved:
 
-* Fixed **11 blank `TotalCharges` values** (all belonging to new customers with `tenure = 0`) using `NULLIF()`.
+* Fixed **11 blank TotalCharges values** (all belonging to new customers with `tenure = 0`) using Update and Set where tenure = 0 .
 * Removed hidden **carriage return (`\r`) characters** from text columns using `REPLACE()` after diagnosing the issue with `HEX()` and `LENGTH()`.
 * Verified data consistency across categorical columns.
 * Performed duplicate and missing value checks.
